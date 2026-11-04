@@ -1,0 +1,29 @@
+{
+  "name": "guardrail-agent",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Claude-driven agent that spends only through the guardrail contract (function-call key, two methods).",
+  "scripts": {
+    "typecheck": "tsc --noEmit",
+    "deploy": "tsx src/deploy.ts",
+    "demo": "tsx src/agent.ts",
+    "tail": "tsx src/tail.ts",
+    "derive": "tsx src/derive.ts",
+    "set-policy": "tsx src/set-policy.ts",
+    "rebroadcast": "tsx src/rebroadcast.ts",
+    "compromised": "tsx src/compromised.ts"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^1.0.0",
+    "dotenv": "^16.4.5",
+    "ethers": "^6.13.4",
+    "near-api-js": "^5.1.1",
+    "zod": "^4.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.14.0",
+    "tsx": "^4.19.0",
+    "typescript": "^5.5.0"
+  }
+}

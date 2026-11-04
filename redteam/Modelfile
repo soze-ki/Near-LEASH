@@ -1,0 +1,8 @@
+# ollama create guardrail-target -f redteam/Modelfile
+# Hardware found 2026-10-28: RTX 3050 Ti Mobile on the nouveau driver (no CUDA), 30 GB RAM -> CPU only.
+# If the proprietary NVIDIA driver is installed later, set num_gpu 99 (4 GB VRAM fits this 2.5 GB model + 8k ctx).
+FROM qwen3:4b-instruct-2507-q4_K_M
+PARAMETER num_ctx 8192
+PARAMETER temperature 0
+PARAMETER seed 7
+PARAMETER num_gpu 0

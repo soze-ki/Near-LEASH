@@ -1,0 +1,53 @@
+{
+  "version": 3,
+  "windows": [
+    {
+      "seconds": 3600,
+      "max_usd_cents": 2000
+    },
+    {
+      "seconds": 86400,
+      "max_usd_cents": 5000
+    }
+  ],
+  "per_request_max_usd_cents": 1000,
+  "approval_threshold_usd_cents": 500,
+  "cooldown_seconds": 60,
+  "evm": {
+    "allowed_chain_ids": [
+      84532
+    ],
+    "allowed_recipients": [
+      "0x3da266e66c93b4307f26bb285829fb22d0a1317d"
+    ],
+    "allowed_selectors": [],
+    "erc20_tokens": [
+      {
+        "address": "0x036cbd53842c5426634e7929541ec2318f3dcf7e",
+        "decimals": 6,
+        "usd_cents_per_token": 100
+      }
+    ],
+    "max_gas_limit": 100000,
+    "max_fee_per_gas_wei": 50000000000,
+    "paths": [
+      "treasury-base"
+    ],
+    "usd_cents_per_native": 300000
+  },
+  "intents": {
+    "allowed_origin_assets": [
+      "nep141:17208628f84f5d6ad33f0da3bbbeb27ffcb398eac501a31bd6ad2011e36133a1"
+    ],
+    "allowed_destination_assets": [
+      "nep141:base-0x833589fcd6edb6e08f4c7c32d4f71b54bda02913.omft.near"
+    ],
+    "allowed_recipients": [
+      "0x3da266e66c93b4307f26bb285829fb22d0a1317d"
+    ],
+    "max_slippage_bps": 100,
+    "min_amount_out_ratio_bps": 9800,
+    "max_quote_age_seconds": 120,
+    "quote_signer": "ed25519:reYaWhvwu8Jzo3WUM3zhn6VrhuMEF4eADL17qtRVifc"
+  }
+}
