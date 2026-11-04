@@ -124,3 +124,22 @@ cargo test -p guardrail                                      # unit + sandbox
 cargo build -p guardrail --target wasm32-unknown-unknown --release
 cd agent && npm i && npm run typecheck
 ```
+## Hackathon disclosure
+
+- **Timeline.** Development started 2026-10-21, after the 2026-10-19 announcement (rules Q-001).
+  Everything in this repo was built for NEAR HACKATHON; there is no pre-existing product or baseline.
+- **AI-written code (rules Q-005).** Most of the code, tests and docs were written with Claude Code
+  (Anthropic) as a pair programmer, directed and reviewed by the team. The demo agent's inference uses
+  the Claude API (`claude-opus-5-5`); the red-team target uses a local Qwen3 4B model through Ollama.
+- **License.** MIT, see `LICENSE`.
+
+### Libraries and data used
+
+| Where | What |
+|---|---|
+| Contract (Rust) | `near-sdk` 5, `omni-transaction` 0.5 (EIP-1559 building), `serde`/`serde_json`, `bs58`, `hex` |
+| Contract tests | `near-workspaces` (sandbox), `ed25519-dalek`, `sha2`, `tokio`, `chrono`, `anyhow` |
+| Test vectors | Signed 1Click quotes from the `one-click-sdk-typescript` 0.1.25 test suite (staging) and one live production quote fetched 2026-11-04 |
+| Agent (TypeScript) | `@anthropic-ai/sdk` (tool runner), `near-api-js` 5, `ethers` 6, `zod`, `dotenv`, `tsx` |
+| Red-team harness (Python) | `ollama` Python client, model `qwen3:4b-instruct-2507-q4_K_M` |
+| NEAR services | NEAR testnet, MPC signer `v1.signer-prod.testnet` (Chain Signatures), 1Click API (quote verification only) |
