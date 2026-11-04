@@ -1,0 +1,7 @@
+target/
+*.wasm
+node_modules/
+.env
+agent/.agent-key.json
+agent/.env
+agent/.deploy-key.*.json
