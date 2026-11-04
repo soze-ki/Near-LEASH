@@ -1,4 +1,4 @@
-# Guardrail
+# Near-LEASH
 
 An on-chain policy gate that lets an AI agent spend from a treasury through NEAR Chain Signatures
 and NEAR Intents (1Click) without ever holding keys or funds. The agent gets a function-call key to
